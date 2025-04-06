@@ -1,15 +1,25 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <nav className="navbar" role="navigation" aria-label="main navigation">
+      <div className="navbar-item">
+        <h2 className="is-size-4">Vue List Of Posts</h2>
+      </div>
+      <div className="navbar-end">
+        <div className="navbar-item">
+          <div className="buttons">
+            <div className="mr-5 mb-2">
+              <p>User: {user.name}</p>
+            </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+            <a className="button is-light"> Logout </a>
+          </div>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -17,31 +27,3 @@ import TheWelcome from './components/TheWelcome.vue'
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
